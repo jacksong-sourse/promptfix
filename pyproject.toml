@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptfix"
+version = "1.0.0"
+description = "AI Prompt Security Detector - Detect unsolvable traps in prompts"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "openai>=1.0.0",
+    "click>=8.0.0",
+    "colorama>=0.4.6",
+    "python-dotenv>=1.0.0",
+]
+keywords = [
+    "prompt-engineering",
+    "llm",
+    "ai-security",
+    "prompt-security",
+    "deepseek",
+    "nlp",
+    "ai-safety",
+    "prompt-validation",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security",
+    "Topic :: Text Processing :: Linguistic",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+
+[project.scripts]
+promptfix = "promptfix.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
